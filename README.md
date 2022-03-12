@@ -1,6 +1,6 @@
 # Implementation and Visualization of Graph Algorithms using NetworkX and Tkinter
 
-#Experimental Setup
+# Experimental Setup
 
 •	Visual Studio Code as Code Editor 
 •	Python Installation for using it as programming language. 
@@ -9,7 +9,7 @@
 •	Installation of Tkinter library for Graphical User Interface. 
 
 
-#Step To Run:
+# Step To Run:
 
 1) Open vs code terminal in the current directory of AlgoProject
 2) Write python interface.py
