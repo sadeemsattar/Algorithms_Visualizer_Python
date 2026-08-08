@@ -1,6 +1,6 @@
+import os
 from tkinter import *
 
-from networkx.generators.geometric import euclidean
 from ClusteringCoefficient import ClusteringCoefficient
 from FloydWarshallAlgorithm import FloydWarshallAlgo
 from getData import *
@@ -8,14 +8,15 @@ from PrintGraph import *
 from BellmenFordAlgorithm import *
 from PrimsAlgorithm import *
 from DijkstraAlgorithm import *
-from KruskalAlgorithm import*
+from KruskalAlgorithm import *
 from boruvkasMST import *
-import pandas as pd
-import re
 import networkx as nx
-import numpy as np
-import matplotlib.pyplot as plt
+
 INF = 9999999
+
+# Input files live in <repo root>/data, resolved relative to this file so the
+# program works no matter which directory it is launched from.
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 # create canvas
 root = Tk()
 Heading = Label(root, text="Algorithms")
@@ -37,7 +38,7 @@ def selected():
     G.clear()
     no_of_nodes = click.get()
     if no_of_nodes != 0:
-        fileName = "input"+no_of_nodes+".txt"
+        fileName = os.path.join(DATA_DIR, "input"+no_of_nodes+".txt")
         print(fileName)
         startNode = getData(fileName, G, G1)
         # print(startNode)
